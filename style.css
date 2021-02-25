@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400&display=swap");
+
+body {
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  max-width: 850px;
+  position: relative;
+  margin: 100px auto;
+  height: 70vh;
+}
+
+h1 {
+  font-size: 2.4rem;
+}
+
+h2 {
+  font-size: 1.7rem;
+}
+
+p {
+  font-size: 1.3rem;
+}
+
+a {
+  color: black;
+}
+
+a:hover {
+  color: blueviolet;
+}
+
+a:visited {
+  color: black;
+}
+
+button {
+  border: none;
+  background-color: blueviolet;
+  color: white;
+  padding: 15px 45px;
+  border-radius: 30px;
+  font-size: 1.4rem;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+button:focus {
+  outline: none;
+}
+
+button:active {
+  transform: scale(0.9);
+  animation-duration: 0.1;
+}
+
+button:hover {
+  background-color: rgb(158, 84, 226);
+}
+
+#show-add-btn {
+  border-radius: 100px;
+  font-size: 3rem;
+  padding: 15px 30px;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+
+#question-container {
+  height: 50px;
+  padding: 20px 0px 80px;
+}
+
+#add-container,
+#info-container {
+  padding: 40px 40px;
+  background-color: rgb(222, 172, 255);
+  border-radius: 30px;
+  max-width: 500px;
+  position: absolute;
+  top: 65px;
+  left: 18.5%;
+  text-align: left;
+}
+
+#message-container {
+  position: absolute;
+  padding-top: 80px;
+  background-color: rgb(222, 172, 255);
+  width: 92%;
+  height: 220px;
+  top: 20px;
+  left: 20px;
+}
+
+#info-btn {
+  background-color: #fff;
+  color: blueviolet;
+  font-size: 3rem;
+  font-style: italic;
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+}
+
+label {
+  font-size: 1.2rem;
+}
+
+input {
+  width: 100%;
+  margin-bottom: 20px;
+  margin-top: 5px;
+  font-size: 1.2rem;
+  padding: 5px;
+  font-family: "Montserrat", sans-serif;
+}
+
+input:focus {
+  outline-color: blueviolet;
+}
+
+.hidden {
+  display: none;
+}
