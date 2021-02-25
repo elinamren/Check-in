@@ -4,18 +4,37 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Document</title>
   </head>
   <body>
-    <h1>Check in</h1>
-    <p id="question-holder"></p>
-    <button onclick="getRandomQuestion()">Get random</button>
-
-    <div class="form-container">
+    <h1>Hello, get ready to check in!</h1>
+    <div id="question-container">
+      <p id="question-holder"></p>
+    </div>
+    <button id="get-btn" onclick="getRandomQuestion()">
+      Get random question
+    </button>
+    <button id="show-add-btn" onclick="openAddContainer()">+</button>
+    <div id="add-container" class="hidden">
+      <h2>Add your best check in question!</h2>
+      <label for="question-input">Write your awesome question here!</label>
       <input id="question-input" type="text" name="Check in addQuestion" />
+      <label for="by-input">And your name here.</label>
       <input id="by-input" type="text" name="Added body" />
-      <button onclick="addQuestion()" type="button">Add</button>
-      <p id="form-message"></p>
+      <button id="add-btn" onclick="addQuestion()" type="button">Add</button>
+      <div id="message-container" class="hidden">
+        <h3 id="form-message">Your question was successfully added!</h3>
+      </div>
+    </div>
+    <button id="info-btn" onclick="showInfo()">i</button>
+    <div id="info-container" class="hidden">
+      <p>
+        Here you can get a random check in question or discussion starter and
+        add your own that will be added to the list. <br /><br />I use google
+        sheet as a database. Find out more about this project
+        <a href="https://github.com/elinamren/checkin-in">here</a>.
+      </p>
     </div>
     <script src="script.js" type="text/javascript"></script>
   </body>
