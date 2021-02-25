@@ -47,10 +47,9 @@ function addQuestion() {
   })
     .then((r) => r.json())
     .then((data) => {
-      inputContainer.classList.add("hidden");
-
-      formMessage.innerText =
-        "Your awesome check in question was added successfully, thank you!";
+      alert(
+        "Your awesome check in question was added successfully, thank you!"
+      );
     })
     .catch((error) => {
       alert(
@@ -58,9 +57,9 @@ function addQuestion() {
       );
       console.log(error);
     });
+  questionInput.value = "";
+  addedByInput.value = "";
   setTimeout(function () {
     addContainer.classList.add("hidden");
-    messageContainer.classList.add("hidden");
-    infoContainer.classList.remove("hidden");
-  }, 3000);
+  }, 2000);
 }
