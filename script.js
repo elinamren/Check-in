@@ -14,7 +14,7 @@ function showInfo() {
   infoContainer.classList.toggle("hidden");
 }
 
-//Get random checkin question
+//Get random checkin question from google sheet
 function getRandomQuestion() {
   fetch("https://sheet.best/api/sheets/4f03694e-3864-469d-8873-94f1fd604bde")
     .then((response) => response.json())
@@ -31,6 +31,7 @@ function getRandomQuestion() {
     });
 }
 
+// Post question to google sheet
 function addQuestion() {
   fetch("https://sheet.best/api/sheets/4f03694e-3864-469d-8873-94f1fd604bde", {
     method: "POST",
@@ -64,21 +65,3 @@ function addQuestion() {
     messageContainer.classList.add("hidden");
   }, 3000);
 }
-
-// Style button
-
-document.querySelectorAll("button").forEach((btn) =>
-  btn.addEventListener("mousedown", function (e) {
-    gsap.to(btn, { duration: 0.1, scale: 0.9 });
-  })
-);
-
-document.querySelectorAll("button").forEach((btn) =>
-  btn.addEventListener("mouseup", function (e) {
-    gsap.to(btn, {
-      duration: 0.5,
-      scale: 1,
-      ease: Elastic.easeOut.config(1, 0.2),
-    });
-  })
-);
