@@ -3,7 +3,7 @@ const questionInput = document.getElementById("question-input");
 const addedByInput = document.getElementById("by-input");
 const formMessage = document.getElementById("form-message");
 const addContainer = document.getElementById("add-container");
-const messageContainer = document.getElementById("message-container");
+const inputContainer = document.getElementById("input-container");
 const infoContainer = document.getElementById("info-container");
 
 function openAddContainer() {
@@ -21,7 +21,6 @@ function getRandomQuestion() {
     .then((data) => {
       const random = Math.floor(Math.random() * data.length);
       questionHolder.innerText = data[random].text;
-      console.log(data);
     })
     .catch((error) => {
       alert(
@@ -48,11 +47,9 @@ function addQuestion() {
   })
     .then((r) => r.json())
     .then((data) => {
-      messageContainer.classList.remove("hidden");
-
-      formMessage.innerText =
-        "Your awesome check in question was added successfully, thank you!";
-      console.log(data);
+      alert(
+        "Your awesome check in question was added successfully, thank you!"
+      );
     })
     .catch((error) => {
       alert(
@@ -60,8 +57,9 @@ function addQuestion() {
       );
       console.log(error);
     });
+  questionInput.value = "";
+  addedByInput.value = "";
   setTimeout(function () {
     addContainer.classList.add("hidden");
-    messageContainer.classList.add("hidden");
-  }, 3000);
+  }, 2000);
 }
