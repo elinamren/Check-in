@@ -42,6 +42,7 @@ function addQuestion() {
       {
         text: questionInput.value,
         by: addedByInput.value,
+        created: new Date(),
       },
     ]),
   })

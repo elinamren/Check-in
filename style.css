@@ -5,7 +5,7 @@ body {
   text-align: center;
   max-width: 1000px;
   position: relative;
-  margin: 100px auto;
+  margin: 100px auto 0;
   height: 70vh;
 }
 
@@ -118,4 +118,48 @@ input:focus {
 
 .opacity {
   opacity: 0;
+}
+
+@media only screen and (max-width: 780px) {
+  body {
+    height: 90vh;
+    margin-top: 60px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  #show-add-btn {
+    left: 10px;
+    bottom: 5px;
+    top: auto;
+  }
+
+  #info-btn {
+    right: 10px;
+  }
+
+  #question-container {
+    height: 80px;
+    padding: 20px 10px 80px 10px;
+  }
+
+  #add-container,
+  #info-container {
+    padding: 20px;
+    width: 84%;
+    top: 100px;
+  }
+
+  input {
+    width: 95%;
+    font-size: 1rem;
+  }
+  label {
+    font-size: 1rem;
+  }
 }
