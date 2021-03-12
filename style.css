@@ -35,7 +35,7 @@ a:visited {
 
 button {
   border: none;
-  background-color: blueviolet;
+  background-image: linear-gradient(rgb(152, 63, 235), rgb(118, 24, 206));
   color: white;
   padding: 15px 45px;
   border-radius: 30px;
@@ -54,7 +54,7 @@ button:active {
 }
 
 button:hover {
-  background-color: rgb(158, 84, 226);
+  background-image: linear-gradient(rgb(138, 46, 225), rgb(104, 11, 191));
 }
 
 #show-add-btn {
@@ -86,6 +86,7 @@ button:hover {
 }
 
 #info-btn {
+  background-image: none;
   background-color: #fff;
   color: blueviolet;
   font-size: 3rem;
@@ -135,12 +136,13 @@ input:focus {
 
   #show-add-btn {
     left: 10px;
-    bottom: 5px;
+    bottom: 10px;
     top: auto;
   }
 
   #info-btn {
     right: 10px;
+    bottom: 10px;
   }
 
   #question-container {
