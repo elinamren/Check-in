@@ -21,6 +21,10 @@ function getRandomQuestion() {
     .then((data) => {
       const random = Math.floor(Math.random() * data.length);
       questionHolder.innerText = data[random].text;
+      console.log(data.length);
+      data.forEach(function (question) {
+        console.log(question.text);
+      });
     })
     .catch((error) => {
       alert(
@@ -42,7 +46,7 @@ function addQuestion() {
       {
         text: questionInput.value,
         by: addedByInput.value,
-        created: new Date(),
+        created: new Date().toLocaleString(),
       },
     ]),
   })
